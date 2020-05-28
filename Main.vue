@@ -66,7 +66,7 @@
             </div>
           </div>
           <!-- Slideshow, begin -->
-          <div class="carousel-inner cm-mb-show" style="width: auto;">
+          <div class="carousel-inner cm-mb-show cm-slideshow-control_margin-bottom" style="width: auto;">
             <div class="cm-slideshow-wrapper cm-delay" :style="{transform: 'translateX(' + (offset * (-1)) + '%)'}">
               <template v-for="(post, index) in posts">
                   <div class="cm-slideshow-item" :key="index">
@@ -88,28 +88,6 @@
             <!-- end-->
           </div>
           <!-- Slideshow, end -->
-          <!-- Footer, begin -->
-          <footer class="cm-mt-foot cm-footer-visible">
-            <div class="container">
-                <div class="row cm-row">
-                  <div class="col-3 cm-col-3">
-                    <div class="icon-container text-center">
-                        <i class="fab fa-vk text-primary cm-text-size"></i>
-                    </div>
-                  </div>
-                  <div class="col-3 cm-col-3">
-                    <div class="bg-info rounded icon-container text-center"><i class="fab fa-facebook-f text-light cm-text-size"></i></div>
-                  </div>
-                  <div class="col-3 cm-col-3 cm-mb-icon">
-                    <div class="bg-light rounded icon-container text-center"><i class="fab fa-twitter text-info cm-text-size"></i></div>
-                  </div>
-                  <div class="col-3 cm-col-3 cm-mb-icon">
-                    <div class="bg-primary rounded icon-container text-center"><i class="fab fa-linkedin-in text-light cm-text-size"></i></div>
-                  </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Footer, end -->
       </div>
     </div>
 </template>
@@ -411,26 +389,10 @@ export default {
         margin-top: 2.5rem;
     }
 
-    /* Footer styles */
+    /*Slideshow control styles of margin bottom*/
 
-    .cm-footer-visible {
-        background-color: #343a40;
-        min-height: 5rem;
-        width: 100%;
-    }
-
-    .cm-flex-container-bottom {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .icon-container {
-        padding: 5px 15px; 
-        margin-top: 0.75rem;
-    }
-
-    .cm-text-size {
-        font-size: 3rem;
+    .cm-slideshow-control_margin-bottom {
+        margin-bottom: 1rem;
     }
     
     /*Media queries carousel styles*/
@@ -491,7 +453,7 @@ export default {
         }
 
         .cm-carousel-caption .cm-btn-visible {
-            width: 50%;
+            width: 24rem;
         }
 
         .cm-carousel-caption-text {
@@ -551,6 +513,4 @@ export default {
             justify-content: center;
         }
     }
-
-
 </style>

@@ -4,7 +4,7 @@
         <!-- Navigation Top, begin -->
         <div class="mt-3 ml-3 mr-3 cm-flex-container">
           <router-link tag="button" to="/" class="btn btn-dark cm-btn-transform mr-2 text-capitalize">main page</router-link>
-          <router-link tag="button" to="/blog" class="btn btn-danger cm-btn-transform text-capitalize">blog</router-link>
+          <router-link tag="button" to="/blog" class="btn btn-danger cm-btn-transform text-capitalize cm-btn-danger_margin-left">blog</router-link>
         </div>
         <!-- Nav Top, end -->
 
@@ -12,11 +12,6 @@
         <router-view></router-view>
         <!-- router, end -->
     </div>
-
-    <!-- It's better to be explicit -->
-    <!-- <font-awesome-icon :icon="['fas', 'user-secret']" />
-    <font-awesome-icon icon="chevron-left" />
-    <font-awesome-icon :icon="['fas', 'chevron-left']" /> -->
 </template>
 
 <script>
@@ -34,9 +29,13 @@ export default {
     }
 
     .cm-btn-transform {
-        width: 20% !important;
+        width: calc(23% + 3px) !important;
         height: 3rem !important;
         font-size: 1.35rem !important;
+    }
+
+    .cm-btn-danger_margin-left {
+        margin-left: 1.5rem !important;
     }
 
     /*Media query navtop styles*/
